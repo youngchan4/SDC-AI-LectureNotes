@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "utility/random.h"
 #include "clangmun_func/int_para.h"
 #include "clangmun_func/int_array.h"
+#include "clangmun_func/make_struct.h"
 
 #define ARRAY_MAX       3
 
@@ -46,6 +48,7 @@ void clangmun(void)
 
     // 8
     int *array_d[num1];
+    
     for(i = 0 ; i < num1 ; i++)
     {
         array_d[i] = random_int();
@@ -61,6 +64,15 @@ void clangmun(void)
     printf("array_sum = %d\n", array_s); 
 
     // 11
-    
+    make_s *object;
+    object = init_struct_object();
+
+
+    // 12
+    char *name = "야야야야";
+    set_object_char(object, name);
+    print_struct_object(object);
+
+
 
 }   
