@@ -6,6 +6,14 @@
 
 #include <stdio.h>
 
+void vector_add(void)
+{
+    printf("벡터 덧셈입니다!\n");
+}
+
+
+
+/*
 float add_x_request_form(vector_operation_request *request_form)
 {
     printf("뭐냐 ? first(x): %5.2f, second(x): %5.2f\n", 
@@ -41,3 +49,4 @@ void vector_add(vector_operation_request *request_form)
 
     vector_in_memory_command_table[VECTOR_IN_MEMORY_STORE](&vector_operation_result);
 }
+*/

@@ -2,8 +2,7 @@
 
 #include <stdio.h>
 
-void vector_sub(vector_operation_request *request_form)
+void vector_sub(void)
 {
     printf("벡터 뺄셈입니다!\n");
-    print_vector_operation_request(request_form);
 }

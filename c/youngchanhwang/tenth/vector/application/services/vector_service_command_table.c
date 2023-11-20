@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "vector_service_command.h"
 
-void just_dummy(vector_operation_request *nothing)
+void just_dummy(void)
 {
     printf("단순 더미\n");
 }
