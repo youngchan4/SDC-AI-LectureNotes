@@ -16,6 +16,7 @@
 #define SLAB_CACHE          32
 #define SLAB_CACHE3         128
 
+
 int main (void)
 {
     short test_number = 32768;
@@ -35,8 +36,8 @@ int main (void)
         "/home/eddi/proj/SDC-AI-LectureNotes/"
         "c/youngchanhwang/thirteenth/created_file/이거만들래.txt", O_CREAT | O_RDWR | O_TRUNC, 0644);
 
-    printf("생성된 파일 디스크립터: %d\n", created_file_descriptor);
-    printf("short test = %d\n", test_number);
+    // printf("생성된 파일 디스크립터: %d\n", created_file_descriptor);
+    // printf("short test = %d\n", test_number);
 
     write_content_in_file(created_file_descriptor, contents);
     reset_file_pointer(created_file_descriptor);
@@ -57,7 +58,10 @@ int main (void)
     format2 = init_test_form(major2, 20, self_introduction2);
     write_format_to_file(format2);
 
+    
     read_file_to_format();
+
+    
 
     return 0;
 }
