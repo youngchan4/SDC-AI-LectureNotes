@@ -11,7 +11,10 @@
 class AccountRepository {
 public:
     virtual ~AccountRepository() = default;
-    virtual std::vector<Account> createAccount() = 0;
+    virtual void createAccount() = 0;
+    virtual void checkAccount() = 0;
+
+
 };
 
 #endif //YOUNGCHANHWANG_ACCOUNTREPOSITORY_H

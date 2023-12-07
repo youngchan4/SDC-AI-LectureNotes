@@ -18,6 +18,8 @@ public:
     AccountController(std::shared_ptr<AccountService> accountService);
 
     std::vector<AccountResponse> accountRegister();
+    std::vector<AccountResponse> accountLogin();
+
 };
 
 

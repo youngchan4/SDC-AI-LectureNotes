@@ -29,7 +29,11 @@ add_executable(youngchanhwang main.cpp
         ui/console/window/console_window.h
         mysql/DbProcess.cpp
         mysql/DbProcess.h
-        )
+        account/service/request/AccountRequestLogin.cpp
+        account/service/request/AccountRequestLogin.h
+        account/entity/LoginAccount.cpp
+        account/entity/LoginAccount.h
+)
 
 
 target_include_directories(youngchanhwang PRIVATE ${LIBMYSQLCLIENT_INCLUDE_DIRS})

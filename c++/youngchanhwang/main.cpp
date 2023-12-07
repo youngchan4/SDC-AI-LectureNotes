@@ -14,7 +14,7 @@ int main() {
     auto accountService = std::make_shared<AccountServiceImpl>(accountRepository);
     auto accountController = std::make_shared<AccountController>(accountService);
     accountController->accountRegister();
-
+    accountController->accountLogin();
 
     return 0;
 }

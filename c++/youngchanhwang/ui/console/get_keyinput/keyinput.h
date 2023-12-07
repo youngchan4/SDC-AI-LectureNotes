@@ -11,7 +11,7 @@
 
 class keyinput {
 public:
-    void get_keyinput(std::string& keyboard_input);
+    static void get_keyinput(std::string& keyboard_input);
 
 
     keyinput();

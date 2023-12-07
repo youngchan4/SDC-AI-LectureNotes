@@ -12,6 +12,8 @@ class AccountService {
 public:
     virtual ~AccountService() = default;
     virtual std::vector<AccountResponse> regi() = 0;
+    virtual std::vector<AccountResponse> login() = 0;
+
 };
 
 #endif //YOUNGCHANHWANG_ACCOUNTSERVICE_H

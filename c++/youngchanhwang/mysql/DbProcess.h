@@ -22,7 +22,8 @@ public:
 //    void readData(unsigned int boardId);
 
 
-    bool insertAccount();
+    bool insertAccount(std::string accountId, std::string password);
+    bool checkAccount(std::string accountId, std::string password);
     void selectAccountData();
     void readAccountData(unsigned int id);
 

@@ -6,6 +6,7 @@
 #define YOUNGCHANHWANG_ACCOUNTRESPONSE_H
 
 class AccountResponse {
+public:
 
 };
 
