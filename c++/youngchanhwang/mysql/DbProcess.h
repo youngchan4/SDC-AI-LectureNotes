@@ -24,7 +24,9 @@ public:
 
     bool insertAccount(std::string accountId, std::string password);
     bool checkAccount(std::string accountId, std::string password);
-    void selectAccountData();
+    bool checkId(std::string accountId);
+
+        void selectAccountData();
     void readAccountData(unsigned int id);
 
 
