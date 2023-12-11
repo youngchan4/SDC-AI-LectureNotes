@@ -19,8 +19,8 @@ private:
 
 public:
     AccountServiceImpl(std::shared_ptr<AccountRepository> accountRepository);
-    std::vector<AccountResponse> regi() override;
-    std::vector<AccountResponse> login() override;
+    bool regi(AccountRegisterRequest *request) override;
+    bool login(AccountLoginRequest *request) override;
 
 
 };

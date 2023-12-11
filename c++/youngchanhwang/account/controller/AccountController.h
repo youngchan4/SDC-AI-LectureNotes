@@ -9,6 +9,10 @@
 #include <vector>
 
 #include "../service/AccountService.h"
+#include "response/AccountLoginResponseForm.h"
+#include "request/AccountLoginRequestForm.h"
+#include "response/AccountRegisterResponseForm.h"
+#include "request/AccountRegisterRequestForm.h"
 
 class AccountController {
 private:
@@ -17,8 +21,8 @@ private:
 public:
     AccountController(std::shared_ptr<AccountService> accountService);
 
-    std::vector<AccountResponse> accountRegister();
-    std::vector<AccountResponse> accountLogin();
+    AccountRegisterResponseForm *accountRegister(AccountRegisterRequestForm *requestForm);
+    AccountLoginResponseForm *accountLogin(AccountLoginRequestForm *requestForm);
 
 };
 

@@ -12,13 +12,14 @@
 #include "../entity/LoginAccount.h"
 
 
+
 class AccountRepositoryImpl : public AccountRepository {
 private:
     std::shared_ptr<AccountRequestLogin> accountRequestLogin;
 
 public:
-    void createAccount() override;
-    void checkAccount() override;
+    bool createAccount(Account *account) override;
+    bool checkAccount(std::string account_id, std::string password) override;
 
 };
 

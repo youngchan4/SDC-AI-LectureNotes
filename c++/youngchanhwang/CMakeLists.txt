@@ -33,6 +33,22 @@ add_executable(youngchanhwang main.cpp
         account/service/request/AccountRequestLogin.h
         account/entity/LoginAccount.cpp
         account/entity/LoginAccount.h
+        account/controller/request/AccountLoginRequestForm.cpp
+        account/controller/request/AccountLoginRequestForm.h
+        account/service/request/AccountLoginRequest.cpp
+        account/service/request/AccountLoginRequest.h
+        account/controller/response/AccountLoginResponseForm.cpp
+        account/controller/response/AccountLoginResponseForm.h
+        account/service/response/AccountLoginResponse.cpp
+        account/service/response/AccountLoginResponse.h
+        account/controller/request/AccountRegisterRequestForm.cpp
+        account/controller/request/AccountRegisterRequestForm.h
+        account/controller/response/AccountRegisterResponseForm.cpp
+        account/controller/response/AccountRegisterResponseForm.h
+        account/service/request/AccountRegisterRequest.cpp
+        account/service/request/AccountRegisterRequest.h
+        account/service/response/AccountRegisterResponse.cpp
+        account/service/response/AccountRegisterResponse.h
 )
 
 

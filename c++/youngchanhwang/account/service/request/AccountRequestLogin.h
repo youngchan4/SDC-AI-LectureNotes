@@ -8,10 +8,12 @@
 #include <string>
 #include <vector>
 #include "../../entity/LoginAccount.h"
+#include "../../entity/Account.h"
+
 
 class AccountRequestLogin {
 private:
-    std::string id;
+    std::string account_id;
     std::string password;
 
 public:
