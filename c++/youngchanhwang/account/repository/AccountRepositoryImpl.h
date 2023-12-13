@@ -8,14 +8,14 @@
 
 #include <memory>
 #include "AccountRepository.h"
-#include "../service/request/AccountRequestLogin.h"
+#include "../service/request/AccountLoginRequest.h"
 #include "../entity/LoginAccount.h"
 
 
 
 class AccountRepositoryImpl : public AccountRepository {
 private:
-    std::shared_ptr<AccountRequestLogin> accountRequestLogin;
+    std::shared_ptr<AccountLoginRequest> accountLoginRequest;
 
 public:
     bool createAccount(Account *account) override;

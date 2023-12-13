@@ -18,8 +18,6 @@ add_executable(youngchanhwang main.cpp
         account/service/AccountServiceImpl.cpp
         account/service/AccountService.h
         account/service/AccountServiceImpl.h
-        account/service/response/AccountResponse.cpp
-        account/service/response/AccountResponse.h
         account/repository/AccountRepositoryImpl.cpp
         account/repository/AccountRepository.h
         account/repository/AccountRepositoryImpl.h
@@ -29,8 +27,6 @@ add_executable(youngchanhwang main.cpp
         ui/console/window/console_window.h
         mysql/DbProcess.cpp
         mysql/DbProcess.h
-        account/service/request/AccountRequestLogin.cpp
-        account/service/request/AccountRequestLogin.h
         account/entity/LoginAccount.cpp
         account/entity/LoginAccount.h
         account/controller/request/AccountLoginRequestForm.cpp
@@ -49,6 +45,7 @@ add_executable(youngchanhwang main.cpp
         account/service/request/AccountRegisterRequest.h
         account/service/response/AccountRegisterResponse.cpp
         account/service/response/AccountRegisterResponse.h
+        singleton/Singleton.h
 )
 
 
