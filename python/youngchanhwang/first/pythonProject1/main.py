@@ -17,4 +17,6 @@ if __name__ == '__main__':
     account = Account("hello", "hello")
     print(account)
 
+    account.setAccountId()
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
