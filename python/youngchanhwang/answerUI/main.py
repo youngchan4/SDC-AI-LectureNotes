@@ -51,9 +51,9 @@ def loginProtocol():
     customProtocolService = CustomProtocolServiceImpl.getInstance()
     accountFormRepository = AccountFormRepositoryImpl.getInstance()
 
-    customProtocolService.registerCustomProtocol(
+    customProtocolService.loginCustomProtocol(
         CustomProtocol.ACCOUNT_LOGIN.value,
-        accountFormRepository.AccountLoginForm()
+        accountFormRepository.AccountLoginForm
     )
 
 

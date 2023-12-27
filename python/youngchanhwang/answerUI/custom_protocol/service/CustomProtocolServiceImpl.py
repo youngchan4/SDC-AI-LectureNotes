@@ -27,6 +27,6 @@ class CustomProtocolServiceImpl(CustomProtocolService):
 
 
     def loginCustomProtocol(self, protocolNumber, pointerOfFunction):
-        self.__customProtocolRepository.register(protocolNumber, pointerOfFunction)
+        self.__customProtocolRepository.login(protocolNumber, pointerOfFunction)
 
 
