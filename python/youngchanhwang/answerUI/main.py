@@ -4,6 +4,8 @@ from time import sleep
 from decouple import config
 
 from account_form.repository.AccountFormRepositoryImpl import AccountFormRepositoryImpl
+from product_form.repository.ProductFormRepositoryImpl import ProductFormRepositoryImpl
+
 # pip3 install python-decouple
 
 from client_socket.repository.ClientSocketRepositoryImpl import ClientSocketRepositoryImpl
@@ -32,36 +34,50 @@ def initConsolePrinterDomain():
     ConsoleUiServiceImpl(consoleUiRepository)
 
 
+def registerProtocol():
+    customProtocolService = CustomProtocolServiceImpl.getInstance()
+    accountFormRepository = AccountFormRepositoryImpl.getInstance()
+    productFormRepository = ProductFormRepositoryImpl.getInstance()
+
+    customProtocolService.registerCustomProtocol(
+        CustomProtocol.PRODUCT_CHECK.value,
+        productFormRepository.createProductCheckForm,
+    )
+
+    customProtocolService.registerCustomProtocol(
+        CustomProtocol.PRODUCT_ADD.value,
+        productFormRepository.createProductAddForm,
+    )
+
+    customProtocolService.registerCustomProtocol(
+        CustomProtocol.PRODUCT_LIST.value,
+        productFormRepository.createProductListForm,
+    )
+
+    customProtocolService.registerCustomProtocol(
+        CustomProtocol.ACCOUNT_REGISTER.value,
+        accountFormRepository.createAccountRegisterForm,
+    )
+
+    customProtocolService.registerCustomProtocol(
+        CustomProtocol.ACCOUNT_LOGIN.value,
+        accountFormRepository.AccountLoginForm,
+    )
+
+
+
+
 def initEachDomain():
     initServerSocketDomain()
     initTaskManageDomain()
     initConsolePrinterDomain()
+    registerProtocol()
 
-
-def registerProtocol():
-    customProtocolService = CustomProtocolServiceImpl.getInstance()
-    accountFormRepository = AccountFormRepositoryImpl.getInstance()
-
-    customProtocolService.registerCustomProtocol(
-        CustomProtocol.ACCOUNT_REGISTER.value,
-        accountFormRepository.createAccountRegisterForm
-    )
-
-def loginProtocol():
-    customProtocolService = CustomProtocolServiceImpl.getInstance()
-    accountFormRepository = AccountFormRepositoryImpl.getInstance()
-
-    customProtocolService.loginCustomProtocol(
-        CustomProtocol.ACCOUNT_LOGIN.value,
-        accountFormRepository.AccountLoginForm
-    )
 
 
 
 if __name__ == '__main__':
     initEachDomain()
-    registerProtocol()
-    loginProtocol()
 
     clientSocketService = ClientSocketServiceImpl.getInstance()
 
